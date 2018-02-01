@@ -89,7 +89,7 @@ service_handles.each do |id, handles|
 end
 
 matches.sort! do |x, y|
-    [x[:relevance], x[:description]] <=> [y[:relevance], y[:description]]
+    [-x[:relevance], x[:description]] <=> [-y[:relevance], y[:description]]
 end
 
 
